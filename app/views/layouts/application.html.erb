@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  <![endif]-->
+</head>
+
+<body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <!-- 中国科学院院徽logo
+        <%= link_to image_tag("logo.png", alt: "Rails logo") %>
+        -->
+    <%= link_to "UCAS", '#', id: "logo" %>
+    <nav>
+      <!-- 主页css导航栏 -->
+      <li class="nav navbar-nav navbar-right">
+      <li><%= link_to "首页", root_path %></li>
+      <li><%= link_to "帮助", help_path %></li>
+      <li><%= link_to "立即登录", login_path %></li>
+      <li><%= link_to "关于我们", about_path %></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<p id="notice">果壳交友网<%= notice %></p>
+
+<p>
+  <strong>帖子内容:</strong>
+  <%= @micropost.content %>
+</p>
+
+<p>
+  <strong>用户ID:</strong>
+  <%= @micropost.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
+<%= link_to 'Back', microposts_path %>

@@ -1,0 +1,16 @@
+<% provide(:title, "登陆") %>
+<h2 class="sign">登陆</h2>
+<div class = "Login">
+  <%= form_for(:session, url: login_path) do |f| %>
+
+    <b><%= f.label "邮箱" %></b>
+    <%= f.email_field :email, class: "sign_up" %>
+
+    <b><%= f.label "密码" %></b>
+    <%= f.password_field :password, class: "sign_up"%>
+
+    <%= f.submit "登 陆", class: "login" %>
+  <% end %>
+
+  <p>还没有账户? <%= link_to "立即注册!", signup_path %></p>
+</div>
